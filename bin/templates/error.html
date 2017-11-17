@@ -1,8 +1,16 @@
 <html>
 	<head>
 		<title>Oops</title>
+		<link rel="sytlesheet" th:href="@{/style.css}"></link>
 	</head>
-	<body>
-		111
-	</body>
+	<html>
+		<div class="errorPage">
+		  <span class="Oops">Oops!</span><br/>
+		  <img th:src="@{/MissingPage.png}"/>
+		  <p>There seems to be a problem with the page you requested 
+		  (<span th:text="${path}"></span>).<p>
+		  
+		  <p th:text="${'Details: ' + message}"></p>
+		  </div>
+		  </html>
 </html>

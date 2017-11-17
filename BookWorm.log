@@ -1,0 +1,1342 @@
+2017-11-17 15:09:52.289 ERROR 7996 --- [restartedMain] o.s.b.b.PropertiesConfigurationFactory   : Properties configuration failed validation
+2017-11-17 15:09:52.289 ERROR 7996 --- [restartedMain] o.s.b.b.PropertiesConfigurationFactory   : Field error in object 'server' on field 'ssl': rejected value []; codes [typeMismatch.server.ssl,typeMismatch.ssl,typeMismatch.org.springframework.boot.context.embedded.Ssl,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [server.ssl,ssl]; arguments []; default message [ssl]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl': no matching editors or conversion strategy found]
+2017-11-17 15:09:52.291  WARN 7996 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatEmbeddedServletContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serverProperties': Could not bind properties to ServerProperties (prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is org.springframework.validation.BindException: org.springframework.boot.bind.RelaxedDataBinder$RelaxedBeanPropertyBindingResult: 1 errors
+Field error in object 'server' on field 'ssl': rejected value []; codes [typeMismatch.server.ssl,typeMismatch.ssl,typeMismatch.org.springframework.boot.context.embedded.Ssl,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [server.ssl,ssl]; arguments []; default message [ssl]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl': no matching editors or conversion strategy found]
+2017-11-17 15:09:52.346 ERROR 7996 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target org.springframework.boot.autoconfigure.web.ServerProperties@30571bc failed:
+
+    Property: server.ssl
+    Value: 
+    Reason: Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'org.springframework.boot.context.embedded.Ssl' for property 'ssl': no matching editors or conversion strategy found
+
+
+Action:
+
+Update your application's configuration
+
+2017-11-17 15:11:05.288 DEBUG 13036 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$31fe6816@7d651166}
+2017-11-17 15:11:05.331 DEBUG 13036 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:11:05.332 DEBUG 13036 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:11:05.337 DEBUG 13036 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:11:05.338 DEBUG 13036 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:11:05.344  INFO 13036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c9618fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@52c2920d, org.springframework.security.web.header.HeaderWriterFilter@555fd148, org.springframework.security.web.csrf.CsrfFilter@667a16ab, org.springframework.security.web.authentication.logout.LogoutFilter@5bf36635, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f447bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@91818f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e2bb60d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bb15eda, org.springframework.security.web.session.SessionManagementFilter@7e40d70a, org.springframework.security.web.access.ExceptionTranslationFilter@70c8fe30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@680d1f63]
+2017-11-17 15:11:05.351 DEBUG 13036 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:11:05.352 DEBUG 13036 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:11:05.352 DEBUG 13036 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:11:05.352  INFO 13036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@777a5055, org.springframework.security.web.context.SecurityContextPersistenceFilter@183a9771, org.springframework.security.web.header.HeaderWriterFilter@fc846b0, org.springframework.security.web.authentication.logout.LogoutFilter@fabb31, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@dfca5ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41500e29, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c603d75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4201c295, org.springframework.security.web.session.SessionManagementFilter@57fac981, org.springframework.security.web.access.ExceptionTranslationFilter@39fc19f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@273f7ecf]
+2017-11-17 15:11:06.471 ERROR 13036 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file:/path/to/mykeys.jks] due to [\path\to\mykeys.jks (系统找不到指定的路径。)]
+
+java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+
+2017-11-17 15:11:06.472 ERROR 13036 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:11:06.474 ERROR 13036 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:11:06.488 ERROR 13036 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:13:49.671 DEBUG 11092 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$2b10b191@467ff3b6}
+2017-11-17 15:13:49.715 DEBUG 11092 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:13:49.717 DEBUG 11092 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:13:49.721 DEBUG 11092 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:13:49.722 DEBUG 11092 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:13:49.729  INFO 11092 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3923551a, org.springframework.security.web.context.SecurityContextPersistenceFilter@78fd2cfc, org.springframework.security.web.header.HeaderWriterFilter@75d79a2b, org.springframework.security.web.csrf.CsrfFilter@1fb99557, org.springframework.security.web.authentication.logout.LogoutFilter@6c31bf87, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8e2c343, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e8a8b1b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a5a054f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34a0f771, org.springframework.security.web.session.SessionManagementFilter@77c08f43, org.springframework.security.web.access.ExceptionTranslationFilter@5796d850, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a1deefd]
+2017-11-17 15:13:49.737 DEBUG 11092 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:13:49.738 DEBUG 11092 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:13:49.738 DEBUG 11092 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:13:49.738  INFO 11092 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3bada84a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b735282, org.springframework.security.web.header.HeaderWriterFilter@432637e, org.springframework.security.web.authentication.logout.LogoutFilter@342d47f7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c2e7bc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@656be784, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72d551c4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@440f6db5, org.springframework.security.web.session.SessionManagementFilter@52105e5, org.springframework.security.web.access.ExceptionTranslationFilter@ae09ec6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dbae9ea]
+2017-11-17 15:14:28.137 DEBUG 12484 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$78daa98d@76e34325}
+2017-11-17 15:14:28.180 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:14:28.182 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:14:28.186 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:14:28.187 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:14:28.194  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a4b8c29, org.springframework.security.web.context.SecurityContextPersistenceFilter@f5e97ae, org.springframework.security.web.header.HeaderWriterFilter@37497af, org.springframework.security.web.csrf.CsrfFilter@5baca8bb, org.springframework.security.web.authentication.logout.LogoutFilter@5fdac19f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a0f1bb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b9b836c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b8aca31, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29308652, org.springframework.security.web.session.SessionManagementFilter@7ed3542a, org.springframework.security.web.access.ExceptionTranslationFilter@6cd8f6ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34af9428]
+2017-11-17 15:14:28.202 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:14:28.203 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:14:28.203 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:14:28.203  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d1a60e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@70cdbccf, org.springframework.security.web.header.HeaderWriterFilter@718fcf3d, org.springframework.security.web.authentication.logout.LogoutFilter@6eb0201, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@32b31488, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@574451cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58bd9a3e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b3a9673, org.springframework.security.web.session.SessionManagementFilter@3cc14505, org.springframework.security.web.access.ExceptionTranslationFilter@4846547, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@afeab91]
+2017-11-17 15:15:08.081 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:15:08.082 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:15:08.082 DEBUG 12484 --- [http-nio-8443-exec-1] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2017-11-17 15:15:08.082 DEBUG 12484 --- [http-nio-8443-exec-1] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2017-11-17 15:15:08.083 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:15:08.084 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:15:08.084 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /readingList/Dylan' doesn't match 'POST /logout
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 6 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /readingList/Dylan' doesn't match 'POST /login
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2017-11-17 15:15:08.085 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2017-11-17 15:15:08.086 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2017-11-17 15:15:08.086 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2017-11-17 15:15:08.086 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2017-11-17 15:15:08.086 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2017-11-17 15:15:08.086 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2017-11-17 15:15:08.087 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/readingList/Dylan'; against '/'
+2017-11-17 15:15:08.087 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/readingList/Dylan' matched by universal pattern '/**'
+2017-11-17 15:15:08.087 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /readingList/Dylan; Attributes: [permitAll]
+2017-11-17 15:15:08.087 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2017-11-17 15:15:08.091 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@6ada35d1, returned: 1
+2017-11-17 15:15:08.091 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2017-11-17 15:15:08.091 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2017-11-17 15:15:08.091 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.security.web.FilterChainProxy        : /readingList/Dylan reached end of additional filter chain; proceeding with original chain
+2017-11-17 15:15:08.305 DEBUG 12484 --- [http-nio-8443-exec-1] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:15:08.308 DEBUG 12484 --- [http-nio-8443-exec-1] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2017-11-17 15:15:08.309 DEBUG 12484 --- [http-nio-8443-exec-1] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:15:08.337 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:15:08.338 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /style.css' doesn't match 'POST /logout
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 6 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /style.css' doesn't match 'POST /login
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2017-11-17 15:15:08.339 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/style.css'; against '/'
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/style.css' matched by universal pattern '/**'
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /style.css; Attributes: [permitAll]
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@6ada35d1, returned: 1
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2017-11-17 15:15:08.340 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.security.web.FilterChainProxy        : /style.css reached end of additional filter chain; proceeding with original chain
+2017-11-17 15:15:08.347 DEBUG 12484 --- [http-nio-8443-exec-2] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:15:08.348 DEBUG 12484 --- [http-nio-8443-exec-2] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2017-11-17 15:15:08.348 DEBUG 12484 --- [http-nio-8443-exec-2] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /favicon.ico' doesn't match 'POST /logout
+2017-11-17 15:15:08.836 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 6 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /favicon.ico' doesn't match 'POST /login
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/favicon.ico'; against '/'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/favicon.ico' matched by universal pattern '/**'
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /favicon.ico; Attributes: [permitAll]
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@9055c2bc: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2017-11-17 15:15:08.837 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@6ada35d1, returned: 1
+2017-11-17 15:15:08.838 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2017-11-17 15:15:08.838 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2017-11-17 15:15:08.838 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.security.web.FilterChainProxy        : /favicon.ico reached end of additional filter chain; proceeding with original chain
+2017-11-17 15:15:08.844 DEBUG 12484 --- [http-nio-8443-exec-3] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:15:08.844 DEBUG 12484 --- [http-nio-8443-exec-3] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2017-11-17 15:15:08.844 DEBUG 12484 --- [http-nio-8443-exec-3] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:15:58.776 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:15:58.776 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:15:58.776 DEBUG 12484 --- [http-nio-8443-exec-6] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2017-11-17 15:15:58.776 DEBUG 12484 --- [http-nio-8443-exec-6] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2017-11-17 15:15:58.777 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:15:58.777 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:15:58.777 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:15:58.780 DEBUG 12484 --- [http-nio-8443-exec-6] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8443/readingList/Dylan
+2017-11-17 15:15:58.780 DEBUG 12484 --- [http-nio-8443-exec-6] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:15:58.780 DEBUG 12484 --- [http-nio-8443-exec-6] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:16:51.326 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:16:51.326 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:16:51.326 DEBUG 12484 --- [http-nio-8443-exec-8] w.c.HttpSessionSecurityContextRepository : HttpSession returned null object for SPRING_SECURITY_CONTEXT
+2017-11-17 15:16:51.326 DEBUG 12484 --- [http-nio-8443-exec-8] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@113630cb. A new one will be created.
+2017-11-17 15:16:51.326 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /readingList/Dylan' doesn't match 'POST /logout
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 6 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /readingList/Dylan' doesn't match 'POST /login
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6faa3d44: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: DC381DF088E77F9349B3C4A80DE6B11A; Granted Authorities: ROLE_ANONYMOUS'
+2017-11-17 15:16:51.327 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/readingList/Dylan'; against '/'
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/readingList/Dylan' matched by universal pattern '/**'
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /readingList/Dylan; Attributes: [permitAll]
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6faa3d44: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: DC381DF088E77F9349B3C4A80DE6B11A; Granted Authorities: ROLE_ANONYMOUS
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@6ada35d1, returned: 1
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2017-11-17 15:16:51.328 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.security.web.FilterChainProxy        : /readingList/Dylan reached end of additional filter chain; proceeding with original chain
+2017-11-17 15:16:51.333 DEBUG 12484 --- [http-nio-8443-exec-8] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:16:51.334 DEBUG 12484 --- [http-nio-8443-exec-8] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2017-11-17 15:16:51.334 DEBUG 12484 --- [http-nio-8443-exec-8] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:16:51.347 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:16:51.347 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:16:51.347 DEBUG 12484 --- [http-nio-8443-exec-9] w.c.HttpSessionSecurityContextRepository : HttpSession returned null object for SPRING_SECURITY_CONTEXT
+2017-11-17 15:16:51.348 DEBUG 12484 --- [http-nio-8443-exec-9] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@113630cb. A new one will be created.
+2017-11-17 15:16:51.348 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:16:51.349 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:16:51.351 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /style.css' doesn't match 'POST /logout
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 6 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /style.css' doesn't match 'POST /login
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6faa3d44: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: DC381DF088E77F9349B3C4A80DE6B11A; Granted Authorities: ROLE_ANONYMOUS'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2017-11-17 15:16:51.352 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2017-11-17 15:16:51.353 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2017-11-17 15:16:51.353 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/style.css'; against '/'
+2017-11-17 15:16:51.353 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/style.css' matched by universal pattern '/**'
+2017-11-17 15:16:51.353 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /style.css; Attributes: [permitAll]
+2017-11-17 15:16:51.353 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6faa3d44: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@ffff4c9c: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: DC381DF088E77F9349B3C4A80DE6B11A; Granted Authorities: ROLE_ANONYMOUS
+2017-11-17 15:16:51.354 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@6ada35d1, returned: 1
+2017-11-17 15:16:51.354 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2017-11-17 15:16:51.354 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2017-11-17 15:16:51.355 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.security.web.FilterChainProxy        : /style.css reached end of additional filter chain; proceeding with original chain
+2017-11-17 15:16:51.358 DEBUG 12484 --- [http-nio-8443-exec-9] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:16:51.359 DEBUG 12484 --- [http-nio-8443-exec-9] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2017-11-17 15:16:51.360 DEBUG 12484 --- [http-nio-8443-exec-9] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:16:54.217 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] w.c.HttpSessionSecurityContextRepository : HttpSession returned null object for SPRING_SECURITY_CONTEXT
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: org.apache.catalina.session.StandardSessionFacade@113630cb. A new one will be created.
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1b8251c9
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.security.web.FilterChainProxy        : /readingList/Dylan at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-11-17 15:16:54.218 DEBUG 12484 --- [http-nio-8443-exec-10] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8443/readingList/Dylan
+2017-11-17 15:16:54.219 DEBUG 12484 --- [http-nio-8443-exec-10] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-11-17 15:16:54.219 DEBUG 12484 --- [http-nio-8443-exec-10] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-11-17 15:32:52.508  WARN 12484 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+2017-11-17 15:32:54.045 DEBUG 12484 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$78daa98d@6c0ab26d}
+2017-11-17 15:32:54.057 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:32:54.057 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:32:54.057 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:32:54.057 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:32:54.058  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d7cff9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@3969eb0c, org.springframework.security.web.header.HeaderWriterFilter@5cbb3645, org.springframework.security.web.csrf.CsrfFilter@266559c4, org.springframework.security.web.authentication.logout.LogoutFilter@48da14bf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d411ed7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@924ca32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ca8dc4d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19c3f43b, org.springframework.security.web.session.SessionManagementFilter@35ce2f08, org.springframework.security.web.access.ExceptionTranslationFilter@28a30bd8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1057688a]
+2017-11-17 15:32:54.059 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:32:54.060 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:32:54.060 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:32:54.060  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6252b98e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1313e53b, org.springframework.security.web.header.HeaderWriterFilter@3a34d86c, org.springframework.security.web.authentication.logout.LogoutFilter@579de546, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b2be8b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793ad30d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@655193fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@758ffe3c, org.springframework.security.web.session.SessionManagementFilter@435e2406, org.springframework.security.web.access.ExceptionTranslationFilter@393a6f23, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21642228]
+2017-11-17 15:32:54.484 ERROR 12484 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file:/path/to/mykeys.jks] due to [\path\to\mykeys.jks (系统找不到指定的路径。)]
+
+java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+
+2017-11-17 15:32:54.485 ERROR 12484 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:32:54.486 ERROR 12484 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.FileNotFoundException: \path\to\mykeys.jks (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_141]
+	at java.io.FileInputStream.open(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source) ~[na:1.8.0_141]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:32:54.500 ERROR 12484 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:33:48.703 DEBUG 12484 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$78daa98d@53b69d52}
+2017-11-17 15:33:48.712 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:33:48.712 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:33:48.712 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:33:48.712 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:33:48.714  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4525322f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e44a6ad, org.springframework.security.web.header.HeaderWriterFilter@3c1acba7, org.springframework.security.web.csrf.CsrfFilter@524352bb, org.springframework.security.web.authentication.logout.LogoutFilter@267d4ba7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@39118aac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d090c27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57a4bfd2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@172703be, org.springframework.security.web.session.SessionManagementFilter@26dafe47, org.springframework.security.web.access.ExceptionTranslationFilter@581161fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@748bf2ac]
+2017-11-17 15:33:48.715 DEBUG 12484 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:33:48.715 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:33:48.715 DEBUG 12484 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:33:48.715  INFO 12484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16c53ee0, org.springframework.security.web.context.SecurityContextPersistenceFilter@501110a2, org.springframework.security.web.header.HeaderWriterFilter@73929540, org.springframework.security.web.authentication.logout.LogoutFilter@4910f40c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@115c798c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f3bc3d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48647be5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bdd48a5, org.springframework.security.web.session.SessionManagementFilter@6fedd306, org.springframework.security.web.access.ExceptionTranslationFilter@4976d47b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37c4656e]
+2017-11-17 15:33:48.845 ERROR 12484 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_141]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+
+2017-11-17 15:33:48.846 ERROR 12484 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_141]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_141]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+
+2017-11-17 15:33:48.855 ERROR 12484 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:34:24.426 DEBUG 2780 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$c6c16399@17043e79}
+2017-11-17 15:34:24.474 DEBUG 2780 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:34:24.475 DEBUG 2780 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:34:24.480 DEBUG 2780 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:34:24.481 DEBUG 2780 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:34:24.489  INFO 2780 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@213b91fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c294d3a, org.springframework.security.web.header.HeaderWriterFilter@383865b, org.springframework.security.web.csrf.CsrfFilter@71a2d931, org.springframework.security.web.authentication.logout.LogoutFilter@5acc4604, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26f3e6f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@126611be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3cf46876, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66dd1787, org.springframework.security.web.session.SessionManagementFilter@1d4c4338, org.springframework.security.web.access.ExceptionTranslationFilter@51867502, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@187cb74b]
+2017-11-17 15:34:24.496 DEBUG 2780 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:34:24.496 DEBUG 2780 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:34:24.497 DEBUG 2780 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:34:24.497  INFO 2780 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cc7aa8b, org.springframework.security.web.context.SecurityContextPersistenceFilter@51a29af0, org.springframework.security.web.header.HeaderWriterFilter@ce28a26, org.springframework.security.web.authentication.logout.LogoutFilter@1661517c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f1f7a88, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40e92f37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58423eb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fecc943, org.springframework.security.web.session.SessionManagementFilter@6a6d1cb2, org.springframework.security.web.access.ExceptionTranslationFilter@772c506, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61730f69]
+2017-11-17 15:34:25.539 ERROR 2780 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+
+java.lang.IllegalArgumentException: Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.resolve(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:88) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parseHierarchical(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_141]
+	... 31 common frames omitted
+
+2017-11-17 15:34:25.540 ERROR 2780 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:34:25.541 ERROR 2780 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 15: file:/c/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:34:25.561 ERROR 2780 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:35:23.133 DEBUG 12640 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$92a467de@5c280e21}
+2017-11-17 15:35:23.177 DEBUG 12640 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:35:23.179 DEBUG 12640 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:35:23.183 DEBUG 12640 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:35:23.185 DEBUG 12640 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:35:23.193  INFO 12640 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4faa6bde, org.springframework.security.web.context.SecurityContextPersistenceFilter@63ae88e, org.springframework.security.web.header.HeaderWriterFilter@54fe1cbe, org.springframework.security.web.csrf.CsrfFilter@1fa2fef, org.springframework.security.web.authentication.logout.LogoutFilter@3e63cd42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@587b8d3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@157803bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@225d07a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78d5ca4a, org.springframework.security.web.session.SessionManagementFilter@72bc7dc5, org.springframework.security.web.access.ExceptionTranslationFilter@7227586, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@540cc167]
+2017-11-17 15:35:23.201 DEBUG 12640 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:35:23.201 DEBUG 12640 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:35:23.201 DEBUG 12640 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:35:23.202  INFO 12640 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63b09223, org.springframework.security.web.context.SecurityContextPersistenceFilter@20f96189, org.springframework.security.web.header.HeaderWriterFilter@4724b91, org.springframework.security.web.authentication.logout.LogoutFilter@2d4ca7d3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@147dfd73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a0e59dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c36b7ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c559e3f, org.springframework.security.web.session.SessionManagementFilter@ed5877b, org.springframework.security.web.access.ExceptionTranslationFilter@1bc4312a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4613ca4d]
+2017-11-17 15:35:23.969 ERROR 12640 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+
+java.lang.IllegalArgumentException: Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.resolve(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:88) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parseHierarchical(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_141]
+	... 31 common frames omitted
+
+2017-11-17 15:35:23.970 ERROR 12640 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:35:23.971 ERROR 12640 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://c:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:35:23.986 ERROR 12640 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:36:35.534 DEBUG 12364 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$148efd3d@78c1ce19}
+2017-11-17 15:36:35.578 DEBUG 12364 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:36:35.579 DEBUG 12364 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:36:35.584 DEBUG 12364 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:36:35.585 DEBUG 12364 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:36:35.592  INFO 12364 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e81a8c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2baa215d, org.springframework.security.web.header.HeaderWriterFilter@96e9941, org.springframework.security.web.csrf.CsrfFilter@51f66a97, org.springframework.security.web.authentication.logout.LogoutFilter@38df82e6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@119e3f23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d03cd0d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38410810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@225b381d, org.springframework.security.web.session.SessionManagementFilter@16c143df, org.springframework.security.web.access.ExceptionTranslationFilter@5dd60af4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1efd38f8]
+2017-11-17 15:36:35.599 DEBUG 12364 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:36:35.599 DEBUG 12364 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:36:35.599 DEBUG 12364 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:36:35.599  INFO 12364 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@158733ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@58335c1b, org.springframework.security.web.header.HeaderWriterFilter@1dc96c8d, org.springframework.security.web.authentication.logout.LogoutFilter@1da42462, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5263977e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cb71e8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a4cb890, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d65669, org.springframework.security.web.session.SessionManagementFilter@40ee3433, org.springframework.security.web.access.ExceptionTranslationFilter@5d2f21eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@668ceb15]
+2017-11-17 15:36:36.357 ERROR 12364 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+
+java.lang.IllegalArgumentException: Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.resolve(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:88) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parseHierarchical(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_141]
+	... 31 common frames omitted
+
+2017-11-17 15:36:36.358 ERROR 12364 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:36:36.359 ERROR 12364 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 17: file://C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:36:36.377 ERROR 12364 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:38:40.596 DEBUG 2136 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$4cdb0c07@3b31fcb9}
+2017-11-17 15:38:40.641 DEBUG 2136 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:38:40.642 DEBUG 2136 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:38:40.646 DEBUG 2136 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:38:40.647 DEBUG 2136 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:38:40.655  INFO 2136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f438c3d, org.springframework.security.web.context.SecurityContextPersistenceFilter@35b8c7a4, org.springframework.security.web.header.HeaderWriterFilter@24c070bf, org.springframework.security.web.csrf.CsrfFilter@48662d7e, org.springframework.security.web.authentication.logout.LogoutFilter@6d5f0b6f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@92f6520, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a2c8c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@392996b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3987ab87, org.springframework.security.web.session.SessionManagementFilter@5577613d, org.springframework.security.web.access.ExceptionTranslationFilter@4e995cc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@644aec71]
+2017-11-17 15:38:40.662 DEBUG 2136 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:38:40.662 DEBUG 2136 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:38:40.662 DEBUG 2136 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:38:40.662  INFO 2136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1935711f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ce6768b, org.springframework.security.web.header.HeaderWriterFilter@62b6807b, org.springframework.security.web.authentication.logout.LogoutFilter@17ac5cfb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7dfea6e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51de57a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73db0bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b703b2c, org.springframework.security.web.session.SessionManagementFilter@bccff88, org.springframework.security.web.access.ExceptionTranslationFilter@72c9f99a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18ffc135]
+2017-11-17 15:38:41.420 ERROR 2136 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+
+java.lang.IllegalArgumentException: Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.resolve(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:88) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parseHierarchical(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_141]
+	... 31 common frames omitted
+
+2017-11-17 15:38:41.421 ERROR 2136 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:38:41.422 ERROR 2136 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 16: file:/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:38:41.438 ERROR 2136 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:40:13.003 DEBUG 8252 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$9b2ee64@13dcc852}
+2017-11-17 15:40:13.047 DEBUG 8252 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:40:13.049 DEBUG 8252 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:40:13.053 DEBUG 8252 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:40:13.054 DEBUG 8252 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:40:13.061  INFO 8252 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58da1b57, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c5d519e, org.springframework.security.web.header.HeaderWriterFilter@79e65910, org.springframework.security.web.csrf.CsrfFilter@279d508f, org.springframework.security.web.authentication.logout.LogoutFilter@6ff79395, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@706af28a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fba2bd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4658bce2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2611857, org.springframework.security.web.session.SessionManagementFilter@7e9ae678, org.springframework.security.web.access.ExceptionTranslationFilter@2fb46010, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ea469e5]
+2017-11-17 15:40:13.068 DEBUG 8252 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:40:13.068 DEBUG 8252 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:40:13.069 DEBUG 8252 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:40:13.069  INFO 8252 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38b88c7b, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e6e7fd9, org.springframework.security.web.header.HeaderWriterFilter@20008642, org.springframework.security.web.authentication.logout.LogoutFilter@57a8c479, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2c40a7bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52970cdf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7601a259, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@752ef4ac, org.springframework.security.web.session.SessionManagementFilter@722c98a4, org.springframework.security.web.access.ExceptionTranslationFilter@1d1c3338, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30520014]
+2017-11-17 15:40:13.831 ERROR 8252 --- [restartedMain] org.apache.tomcat.util.net.SSLUtilBase   : Failed to load keystore type [JKS] with path [file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+
+java.lang.IllegalArgumentException: Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.resolve(Unknown Source) ~[na:1.8.0_141]
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:88) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:132) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parseHierarchical(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_141]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_141]
+	... 31 common frames omitted
+
+2017-11-17 15:40:13.832 ERROR 8252 --- [restartedMain] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["https-jsse-nio-8443"]
+
+java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:40:13.834 ERROR 8252 --- [restartedMain] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8443]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8443]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at readinglist.ReadingListApplication.main(ReadingListApplication.java:10) [bin/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_141]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.io.IOException: Failed to load keystore type [JKS] with path [file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:115) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:86) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to load keystore type [JKS] with path [file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks] due to [Illegal character in path at index 27: file://localhost/C:/Program Files/Java/jre1.8.0_141/bin/mykeys.jks]
+	at org.apache.tomcat.util.net.SSLUtilBase.getStore(SSLUtilBase.java:152) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SSLHostConfigCertificate.getCertificateKeystore(SSLHostConfigCertificate.java:187) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.jsse.JSSEUtil.getKeyManagers(JSSEUtil.java:183) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:113) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 24 common frames omitted
+
+2017-11-17 15:40:13.850 ERROR 8252 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8443 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8443, or configure this application to listen on another port.
+
+2017-11-17 15:48:54.477 DEBUG 15968 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$3114e3c7@62a6e55a}
+2017-11-17 15:48:54.521 DEBUG 15968 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:48:54.522 DEBUG 15968 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:48:54.527 DEBUG 15968 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:48:54.529 DEBUG 15968 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:48:54.536  INFO 15968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54f95777, org.springframework.security.web.context.SecurityContextPersistenceFilter@5038be29, org.springframework.security.web.header.HeaderWriterFilter@593e26f8, org.springframework.security.web.csrf.CsrfFilter@6ad8ea26, org.springframework.security.web.authentication.logout.LogoutFilter@54c6091c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e812146, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a275702, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f200d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1843f5c8, org.springframework.security.web.session.SessionManagementFilter@179597d, org.springframework.security.web.access.ExceptionTranslationFilter@2bd4b98d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f7d3d91]
+2017-11-17 15:48:54.543 DEBUG 15968 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:48:54.543 DEBUG 15968 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:48:54.543 DEBUG 15968 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:48:54.544  INFO 15968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f903aa6, org.springframework.security.web.context.SecurityContextPersistenceFilter@41d3c0fb, org.springframework.security.web.header.HeaderWriterFilter@37a59894, org.springframework.security.web.authentication.logout.LogoutFilter@5d409ada, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5724720a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cbfeb4e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27c5a575, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69a4db06, org.springframework.security.web.session.SessionManagementFilter@32cac4c, org.springframework.security.web.access.ExceptionTranslationFilter@7f405a3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4efefa24]
+2017-11-17 15:51:26.210 DEBUG 2704 --- [restartedMain] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=readinglist.SecurityConfig$$EnhancerBySpringCGLIB$$b71f0598@6c1ee524}
+2017-11-17 15:51:26.254 DEBUG 2704 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('READER')', for Ant [pattern='/']
+2017-11-17 15:51:26.255 DEBUG 2704 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/**']
+2017-11-17 15:51:26.260 DEBUG 2704 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:51:26.261 DEBUG 2704 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:51:26.268  INFO 2704 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@140fe68e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2719a327, org.springframework.security.web.header.HeaderWriterFilter@3458dd30, org.springframework.security.web.csrf.CsrfFilter@136a781c, org.springframework.security.web.authentication.logout.LogoutFilter@e52cc81, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@283f5c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2baa215d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32aa7573, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78855a50, org.springframework.security.web.session.SessionManagementFilter@96e9941, org.springframework.security.web.access.ExceptionTranslationFilter@3f531b03, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@127a87d5]
+2017-11-17 15:51:26.276 DEBUG 2704 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-11-17 15:51:26.277 DEBUG 2704 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:51:26.277 DEBUG 2704 --- [restartedMain] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-11-17 15:51:26.277  INFO 2704 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6830276a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dc96c8d, org.springframework.security.web.header.HeaderWriterFilter@5569b580, org.springframework.security.web.authentication.logout.LogoutFilter@1bb25e46, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59231aaf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40ee3433, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58335c1b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@668ceb15, org.springframework.security.web.session.SessionManagementFilter@5d2f21eb, org.springframework.security.web.access.ExceptionTranslationFilter@617791a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26a68ca7]
+2017-11-17 15:57:40.091  WARN 2704 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+2017-11-17 17:18:42.076  WARN 15416 --- [Thread-11] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+2017-11-17 17:21:20.263  WARN 3008 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
