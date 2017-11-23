@@ -16,9 +16,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 /**
  * Created by langdylan on 14/11/2017.
  */
-@Profile("production")
+//@Profile("development")
 @Configuration
-@EnableWebSecurity
+//@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter 
 {
 
@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-      /*  http.authorizeRequests()
+       http.authorizeRequests()
                 .antMatchers("/").access("hasRole('READER')")
                 .antMatchers("/**").permitAll()
 
@@ -35,17 +35,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 
                 .formLogin()
                 .loginPage("/login")
-                .failureUrl("/login?error=true");*/
+                .failureUrl("/login?error=true");
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(new UserDetailsService() {
+
             @Override
-            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                return readerRepository.findOne(username);
+            public UserDetails loadUserByUsername(String username)
+                throws UsernameNotFoundException {
+              UserDetails userDetails = readerRepository.findOne(username);
+              if (userDetails != null) {
+                return userDetails;
+              }
+              throw new UsernameNotFoundException("User '" + username + "' not found.");
             }
-        });
+          });
 
     }
 }

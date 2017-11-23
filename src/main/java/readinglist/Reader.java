@@ -21,6 +21,7 @@ public class Reader implements UserDetails {
 
     @Id
     private String username;
+    
     private String fullname;
     private String password;
 
@@ -52,7 +53,7 @@ public class Reader implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority("READER"));
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_READER"));
     }
 
     @Override

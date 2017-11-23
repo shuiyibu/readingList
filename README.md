@@ -14,3 +14,76 @@ logging:
     org:
       springframework:
         security: DEBUG
+        
+        
+        
+        --------------------
+spring:
+  thymeleaf: 
+    cache: false
+  profiles:
+    active: development
+    
+amazon:
+  associatedId: habuma-20
+  
+ 
+---
+spring: 
+  profiles: development
+
+logging:
+  level:
+    root: DEBUG  
+        
+---
+
+spring: 
+  profiles: production
+   
+
+
+logging:
+  path: D:/
+  file: BookWorm.log
+  level:
+    root: WARN
+  
+
+---
+server:
+  port: 8484
+
+spring:
+  thymeleaf: 
+    cache: false
+  profiles:
+    active: development
+    
+amazon:
+  associatedId: habuma-20
+  
+ 
+---
+spring: 
+  profiles: development
+
+#logging:
+ # level:
+    #root: DEBUG  
+        
+---
+
+spring: 
+  profiles: production
+   
+
+
+logging:
+  path: D:/
+  file: BookWorm.log
+  level:
+    root: WARN
+  
+
+  
